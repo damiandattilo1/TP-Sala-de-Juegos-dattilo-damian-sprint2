@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { getAuth, signInWithEmailAndPassword } from '@firebase/auth';
 import { Firestore } from '@angular/fire/firestore';
 import { addDoc, collection, getDoc, getDocs, updateDoc } from '@angular/fire/firestore';
@@ -9,28 +9,23 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AuthService } from '../services/auth.service';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-register',
   standalone: true,
   imports: [RouterLink, CommonModule, FormsModule, RouterOutlet],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './register.component.html',
+  styleUrl: './register.component.css'
 })
 
 
-export class LoginComponent {
-  constructor(private authF :AuthService, private router :Router) {}
+export class RegisterComponent {
+  constructor(private authF :AuthService) {}
   
 
   userName: string = "";
   password: string = "";
-  manejarLogin() {
-    this.authF.login(this.userName, this.password);
+  manejarRegistro() {
+    this.authF.register(this.userName, this.password);
 
-    setTimeout(()=>{
-      this.router.navigate(["/home"]);
-    }, 3000);
   }
 }
-
-
 
