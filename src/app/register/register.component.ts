@@ -18,13 +18,14 @@ import { AuthService } from '../services/auth.service';
 
 
 export class RegisterComponent {
-  constructor(private authF :AuthService) {}
+  constructor(public authF :AuthService) {}
   
 
   userName: string = "";
   password: string = "";
   manejarRegistro() {
     this.authF.register(this.userName, this.password);
+    
 
   }
 }

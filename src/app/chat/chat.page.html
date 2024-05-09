@@ -1,0 +1,10 @@
+<h2>Bienvenido al chat</h2>
+
+<form (ngSubmit)="manejarEnviar()">
+    <div class="form-group">
+      <label for="mensaje">Mensaje:</label>
+      <input type="text" class="form-control" id="mensaje" [(ngModel)]="mensaje" name="mensaje" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>

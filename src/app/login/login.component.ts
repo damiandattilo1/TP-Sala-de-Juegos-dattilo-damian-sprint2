@@ -18,18 +18,21 @@ import { AuthService } from '../services/auth.service';
 
 
 export class LoginComponent {
-  constructor(private authF :AuthService, private router :Router) {}
+  
+  constructor(private firestore: AngularFirestore, public authF :AuthService, private router :Router) {}
   
 
   userName: string = "";
   password: string = "";
   manejarLogin() {
     this.authF.login(this.userName, this.password);
-
-    setTimeout(()=>{
-      this.router.navigate(["/home"]);
-    }, 3000);
+    this.guardar();
   }
+  guardar(){
+    const col = this.firestore.collection('usuarios');
+    col.add({Nombre: 'Fernando', Apellido: 'Frenandez', edad: 30});
+  }
+
 }
 
 

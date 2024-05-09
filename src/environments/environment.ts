@@ -1,13 +1,12 @@
 export const environment = {
     production: false,
      firebase: {
-       apiKey: "AIzaSyBodhRrppGG8S8bRC5rA4ae1-t-4w9CLeo",
-       authDomain: "dattilodamian-saladejuegos-sp2.firebaseapp.com",
-       databaseURL: "https://dattilodamian-saladejuegos-sp2.firebaseapp.com",
-       projectId: "dattilodamian-saladejuegos-sp2",
-       storageBucket: "dattilodamian-saladejuegos-sp2.appspot.com",
-       messagingSenderId: "988028569182",
-       appId: "1:988028569182:web:3a7a599b5bd4c4a78dd6cf"
+      apiKey: "AIzaSyBvLGXsJSyha8fl4sNzaME50PvK09ZHLak",
+      authDomain: "dattilodamiansalajuegossp3.firebaseapp.com",
+      projectId: "dattilodamiansalajuegossp3",
+      storageBucket: "dattilodamiansalajuegossp3.appspot.com",
+      messagingSenderId: "747700340042",
+      appId: "1:747700340042:web:fa37102a50ab88fc166db3"
        
     }
   };

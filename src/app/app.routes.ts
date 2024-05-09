@@ -10,4 +10,5 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'quien-soy', component: QuienSoyComponent },
     { path: 'register', component: RegisterComponent },
+    { path: 'chat', loadChildren: () => import ("./chat/chat.module").then((m) => m.ChatModule) },
 ];

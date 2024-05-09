@@ -1,12 +1,19 @@
 {
   "projects": {
-    "default": "dattilodamian-saladejuegos-sp2"
+    "default": "dattilodamiansalajuegossp3"
   },
   "targets": {
     "dattilodamian-saladejuegos-sp2": {
       "hosting": {
         "tp-sala-juegos": [
           "dattilodamian-saladejuegos-sp2"
+        ]
+      }
+    },
+    "dattilodamiansalajuegossp3": {
+      "hosting": {
+        "tp-sala-juegos": [
+          "dattilodamiansalajuegossp3"
         ]
       }
     }

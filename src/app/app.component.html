@@ -1,12 +1,19 @@
 <h1>Sala de juegos Dattilo Damian</h1>
 
-<button routerLink="register" class="route-button btn btn-dark m-1">Registro</button>
-<button routerLink="login" class="route-button btn btn-dark m-1">Login</button>
-<button routerLink="quien-soy" class="route-button btn btn-dark m-1">Quien soy</button>
+<button *ngIf="!logueado()" routerLink="register" class="route-button btn btn-dark m-1">Registro</button>
+<button *ngIf="!logueado()"routerLink="login" class="route-button btn btn-dark m-1">Login</button>
+<button  routerLink="quien-soy" class="route-button btn btn-dark m-1">Quien soy</button>
 
-<div *ngIf="logueado()">
-    <button routerLink="home" class="route-button btn btn-dark m-1">Home</button>
-  </div>
 
+<button *ngIf="logueado()" routerLink="home" class="route-button btn btn-dark m-1">Home</button>
+
+<button *ngIf="logueado()" (click)="logOut()" class="route-button btn btn-dark m-1">Cerrar sesion</button>
+
+<button *ngIf="logueado()" routerLink="chat" class="route-button btn btn-dark m-1">Sala de chat</button>
+<div style ="padding-left: 10px;padding-top: 30px; " *ngIf="logueado()">mail: {{ nombreDeUsuario() }}</div> 
+<div *ngIf="!logueado()">
+    <h3>Bienvenido a la sala de Juegos de Damian Dattilo</h3><br><br>
+    Registrese o inicie sesion para comenzar a jugar<br><br>
+</div>
 
 <router-outlet></router-outlet>

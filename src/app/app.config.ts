@@ -12,6 +12,7 @@ import { initializeApp as initializeApp_alias, provideFirebaseApp } from '@angul
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import { getDatabase, provideDatabase } from '@angular/fire/database';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes),
@@ -21,17 +22,6 @@ export const appConfig: ApplicationConfig = {
     AngularFireDatabaseModule,
     AngularFirestoreModule
 
-  ), importProvidersFrom(provideFirebaseApp(() => initializeApp(
-    {
-      "projectId": "dattilodamian-saladejuegos-sp2",
-      "appId": "1:988028569182:web:3a7a599b5bd4c4a78dd6cf",
-      "storageBucket": "dattilodamian-saladejuegos-sp2.appspot.com",
-      "apiKey": "AIzaSyBodhRrppGG8S8bRC5rA4ae1-t-4w9CLeo",
-      "authDomain": "dattilodamian-saladejuegos-sp2.firebaseapp.com",
-      "messagingSenderId": "988028569182"
-    }))),
-  importProvidersFrom(provideAuth(() => getAuth())),
-  importProvidersFrom(provideFirestore(() => getFirestore())),
-  importProvidersFrom(provideStorage(() => getStorage()))]
-
-};
+  ),
+  ]
+}
